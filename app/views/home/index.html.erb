@@ -1,0 +1,11 @@
+<% if user_signed_in? %>
+    <h1>Bienvenue sur mon site <%= @user.username %></h1>
+<% else %>
+    <h1>Bienvenue sur mon site </h1>
+<% end %>
+<p>
+<%= link_to 'se connecter', new_user_session_path %>
+</p>
+<p>
+<%= link_to 'se déconnecter', destroy_user_session_path, method: 'delete' %>
+</p>
